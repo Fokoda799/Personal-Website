@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Calendar, Rocket, Heart, Star } from 'lucide-react';
 
 const Conclusion = () => {
-  const achievements = [
-    { metric: '6 months', description: 'From idea to working prototype' },
-    { metric: '50+', description: 'User interviews conducted' },
-    { metric: '3', description: 'Major iterations based on feedback' },
-    { metric: '95%', description: 'User satisfaction in testing' }
+   const achievements = [
+    { metric: 'Ongoing', description: 'User research and problem validation' },
+    { metric: '10+', description: 'Interviews and surveys completed' },
+    { metric: 'Early', description: 'Prototype concept mapped' },
+    { metric: '0%', description: 'MVP development (to begin soon)' }
   ];
 
   const nextSteps = [
     {
       icon: <Rocket className="w-6 h-6" />,
-      title: 'Product Launch',
-      description: 'Preparing for beta launch with select customers',
-      timeline: 'Q2 2024'
+      title: 'Build the MVP',
+      description: 'Begin developing the minimum viable product based on user insights and defined feature set.',
+      timeline: 'Q3 2025'
     },
     {
       icon: <Star className="w-6 h-6" />,
-      title: 'Feature Expansion',
-      description: 'Adding advanced analytics and AI-powered insights',
-      timeline: 'Q3 2024'
+      title: 'Test With Real Users',
+      description: 'Validate usability and effectiveness of the MVP through targeted user testing sessions.',
+      timeline: 'Mid Q4 2025'
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: 'Community Building',
-      description: 'Creating a community of small business owners',
-      timeline: 'Q4 2024'
+      title: 'Prepare for Launch',
+      description: 'Refine core features, fix critical bugs, and prepare for early beta launch.',
+      timeline: 'Late Q4 2025'
     }
   ];
 
@@ -37,7 +37,7 @@ const Conclusion = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
-            Conclusion & Next Steps
+            Future Plans
           </h1>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
             Reflecting on the journey so far and looking ahead to the exciting opportunities 
@@ -62,34 +62,31 @@ const Conclusion = () => {
 
         {/* Key Takeaways */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">Key Takeaways</h2>
+          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">Insights So Far</h2>
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <div className="prose prose-lg max-w-none text-secondary-700">
               <p className="text-xl leading-relaxed mb-6">
-                This entrepreneurial journey has been one of the most challenging and rewarding 
-                experiences of my life. It's taught me that building a successful product isn't 
-                just about having a great idea—it's about understanding your users, iterating 
-                based on feedback, and staying resilient through the inevitable ups and downs.
+                 Even though the product is still in its planning phase, this journey has already been a valuable learning experience. I’ve gathered meaningful feedback from potential users and industry peers, which is shaping the direction of the MVP.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <div className="border-l-4 border-primary-600 pl-6">
                   <h3 className="text-xl font-semibold text-secondary-900 mb-3">What I've Learned</h3>
                   <ul className="space-y-2">
-                    <li>• Customer feedback is invaluable and should drive decisions</li>
-                    <li>• Simple solutions often work better than complex ones</li>
-                    <li>• Persistence and adaptability are crucial for success</li>
-                    <li>• Building relationships is as important as building products</li>
+                    <li>Deep problem understanding comes from talking to users</li>
+                    <li>Good planning avoids wasting time on features no one needs</li>
+                    <li>Lean validation helps build confidence before coding</li>
+                    <li>A clear MVP scope is better than endless brainstorming</li>
                   </ul>
                 </div>
                 
                 <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-xl font-semibold text-secondary-900 mb-3">What's Next</h3>
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-3">Immediate Priorities</h3>
                   <ul className="space-y-2">
-                    <li>• Launch beta version with early adopters</li>
-                    <li>• Continue iterating based on user feedback</li>
-                    <li>• Explore partnerships with complementary services</li>
-                    <li>• Share learnings with the entrepreneurial community</li>
+                    <li>Finalize MVP feature list</li>
+                    <li>Create wireframe and basic UI components</li>
+                    <li>Set up basic backend infrastructure</li>
+                    <li>Define success metrics for MVP testing</li>
                   </ul>
                 </div>
               </div>
@@ -123,24 +120,26 @@ const Conclusion = () => {
             I'm always excited to connect with fellow entrepreneurs, potential collaborators, 
             or anyone interested in the journey of building something meaningful.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:alex@example.com"
+            <button
+              onClick={() => alert("Coming soon")}
               className="inline-flex items-center px-8 py-3 bg-white text-secondary-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Mail className="mr-2 w-5 h-5" />
               Get in Touch
-            </a>
-            <a
-              href="#"
+            </button>
+            
+            <button
+              onClick={() => alert("Coming soon")}
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-secondary-900 transition-colors"
             >
               <Calendar className="mr-2 w-5 h-5" />
               Schedule a Chat
-            </a>
+            </button>
           </div>
         </div>
+
 
         {/* Final Message */}
         <div className="mt-16 text-center">

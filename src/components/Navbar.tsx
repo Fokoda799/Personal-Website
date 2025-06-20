@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
             <User className="w-6 h-6" />
-            <span>Alex Chen</span>
+            <span>Abdellah Hadid</span>
           </Link>
 
           {/* Desktop Navigation */}

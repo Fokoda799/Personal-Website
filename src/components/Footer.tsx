@@ -3,10 +3,10 @@ import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'GitHub', icon: Github, href: 'https://github.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/fokoda799' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/abdellah-hadid' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-    { name: 'Email', icon: Mail, href: 'mailto:alex@example.com' },
+    { name: 'Email', icon: Mail, href: 'mailto:abdllahhadid@gmail.com' },
   ];
 
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Alex Chen</h3>
+            <h3 className="text-xl font-bold mb-4">Abdellah Nait Hadid</h3>
             <p className="text-secondary-300 mb-4">
               Entrepreneur and innovator passionate about creating solutions that make a difference.
             </p>
@@ -25,6 +25,7 @@ const Footer = () => {
                   href={link.href}
                   className="text-secondary-400 hover:text-white transition-colors"
                   aria-label={link.name}
+                  target='_blank'
                 >
                   <link.icon className="w-5 h-5" />
                 </a>
@@ -44,8 +45,8 @@ const Footer = () => {
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-secondary-300 mb-2">alex@example.com</p>
-            <p className="text-secondary-300 mb-4">San Francisco, CA</p>
+            <p className="text-secondary-300 mb-2">abdllahhadid@gmail.com</p>
+            <p className="text-secondary-300 mb-4">Morocco</p>
             <p className="text-secondary-300 text-sm">
               Open to collaboration and new opportunities
             </p>
@@ -54,7 +55,7 @@ const Footer = () => {
 
         <div className="border-t border-secondary-800 mt-8 pt-8 text-center">
           <p className="text-secondary-400 flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by Alex Chen © 2024
+            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by Abdellah Hadid © 2025
           </p>
         </div>
       </div>

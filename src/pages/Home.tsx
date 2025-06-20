@@ -4,29 +4,33 @@ import { ArrowRight, Lightbulb, Target, Rocket } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in mt-5">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-bounce-gentle">
             <img
-              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
-              alt="Alex Chen"
-              className="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-white"
+              src="/assets/abdellah.jpg"
+              alt="Abdellah Hadid"
+              className="w-32 h-32 rounded-full mx-auto mb-5 shadow-lg border-4 border-white"
             />
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-secondary-900 mb-6 animate-slide-up">
-            Hi, I'm <span className="text-primary-600">Alex Chen</span>
+            Hi, I'm <span className="text-primary-600">Abdellah Hadid</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-secondary-600 mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Entrepreneur & Innovator
+          <p className="text-xl md:text-2xl text-secondary-600 mb-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            Backend Developer & Rising Entrepreneur
+          </p>
+
+          <p className="text-l md:text-xl text-secondary-500 mb-6 font-light italic animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            "From backend learner to future tech founder one idea, one line of code at a time."
           </p>
           
           <p className="text-lg text-secondary-700 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            Passionate about identifying real-world problems and creating innovative solutions that make a meaningful impact. 
-            Join me on my entrepreneurial journey as I share the challenges, breakthroughs, and lessons learned along the way.
+            I’m a backend developer passionate about solving real-world problems through technology.
+            One issue I’ve noticed is the gap in Morocco’s tourism sector especially in rural areas. Tourists often miss out on authentic local experiences, while small local businesses and guides struggle to be seen. I’m currently exploring the idea of a platform that would connect travelers with trusted locals, artisans, and hidden gems in rural Morocco, making tourism more accessible, meaningful, and beneficial for these communities.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.6s' }}>

@@ -8,6 +8,7 @@ import Solution from './pages/Solution';
 import Prototype from './pages/Prototype';
 import Reflection from './pages/Reflection';
 import Conclusion from './pages/Conclusion';
+import ScrollToTop from './components/ux/ScrollTop';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navbar />
         <main className="pt-16">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/journey" element={<Journey />} />
