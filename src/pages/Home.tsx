@@ -10,7 +10,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-bounce-gentle">
             <img
-              src="/assets/abdellah.jpg"
+              src="/abdellah-hadid/assets/abdellah.jpg"
               alt="Abdellah Hadid"
               className="w-32 h-32 rounded-full mx-auto mb-5 shadow-lg border-4 border-white"
             />
