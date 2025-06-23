@@ -19,34 +19,55 @@ const lowFidelityImages = [
 const Prototype = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
 
-  const features = [
-    {
-      id: 'dashboard',
-      name: 'Dashboard',
-      description: 'Real-time business overview with key metrics and insights',
-    },
-    {
-      id: 'automation',
-      name: 'Automation',
-      description: 'Workflow automation tools for repetitive tasks',
-    },
-    {
-      id: 'analytics',
-      name: 'Analytics',
-      description: 'Comprehensive reporting and data visualization',
-    },
-    {
-      id: 'settings',
-      name: 'Settings',
-      description: 'User management and system configuration',
-    },
-  ];
-
   const techStack = [
-    { name: 'React', description: 'Frontend framework for building user interfaces' },
-    { name: 'Node.js', description: 'Backend runtime for server-side logic' },
-    { name: 'PostgreSQL', description: 'Reliable database for data storage' },
-    { name: 'AWS', description: 'Cloud infrastructure for scalability' },
+    {
+      name: "React Native",
+      description: "Cross-platform mobile framework enabling performant, native-like experiences on iOS and Android."
+    },
+    {
+      name: "Node.js + Express",
+      description: "High-performance backend REST API server optimized for scalability and asynchronous processing."
+    },
+    {
+      name: "GraphQL",
+      description: "Flexible, efficient API layer allowing clients to request exactly the data they need."
+    },
+    {
+      name: "PostgreSQL",
+      description: "Robust, scalable relational database ensuring ACID compliance and complex queries support."
+    },
+    {
+      name: "Redis",
+      description: "In-memory data store used for caching, session management, and real-time data synchronization."
+    },
+    {
+      name: "AWS (EC2, S3, RDS, Lambda)",
+      description: "Cloud infrastructure powering scalable deployment, storage, and serverless functions."
+    },
+    {
+      name: "Kubernetes",
+      description: "Container orchestration platform enabling automated deployment, scaling, and management of microservices."
+    },
+    {
+      name: "Figma",
+      description: "Collaborative design tool enabling prototyping and design handoff with pixel-perfect precision."
+    },
+    {
+      name: "Jest + Detox",
+      description: "Comprehensive testing suite covering unit, integration, and end-to-end testing for app reliability."
+    },
+    {
+      name: "CI/CD Pipelines",
+      description: "Automated build, test, and deployment workflows to ensure rapid and safe product delivery."
+    },
+    {
+      name: "Firebase Analytics & Crashlytics",
+      description: "Real-time user behavior tracking and crash reporting to maintain app quality at scale."
+    },
+    {
+      name: "OAuth 2.0 & JWT",
+      description: "Industry-standard authentication and authorization mechanisms for secure user access."
+    }
   ];
 
   return (
@@ -70,146 +91,89 @@ const Prototype = () => {
             <Play className="w-8 h-8 text-primary-600" />
             Live Prototype Walkthrough
           </h2>
+
           <div className="relative rounded-xl overflow-hidden shadow-lg">
-            <video
-              controls
-              className="w-full rounded-lg"
-              poster="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800"
-            >
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe
+              className="w-full h-[450px] rounded-lg"
+              src="https://drive.google.com/file/d/1nn-7R0nbDKvx3A7zg9NJp_2VASJ8ZdbO/preview"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Prototype Walkthrough Video"
+            ></iframe>
           </div>
+
           <p className="mt-3 text-center text-secondary-600 text-sm italic">
-            *This is a placeholder video. Replace with your actual Week 11 prototype demo.*
+            *This video showcases the main flow of the tourism app prototype.*
           </p>
         </section>
 
-        {/* Low-Fidelity Prototype Images */}
-        <section className="mb-20 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-secondary-900 mb-10 text-center">
-            Low-Fidelity Prototype Snapshots
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {lowFidelityImages.map(({ src, alt }, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
-                title={alt}
-              >
-                <img
-                  src={src}
-                  alt={alt}
-                  className="object-cover w-full h-64 sm:h-56"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
 
-        {/* Interactive Features Tabs */}
-        <section className="mb-20 max-w-5xl mx-auto">
+
+        {/* Figma Interactive Prototype */}
+        <section className="mb-20 max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
-            Interactive Prototype Features
+            Interactive Figma Prototype
           </h2>
 
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <nav className="flex border-b border-gray-200 px-6">
-              {features.map((feature) => (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveTab(feature.id)}
-                  className={`py-4 px-4 text-sm font-semibold transition-colors border-b-4 -mb-px focus:outline-none ${
-                    activeTab === feature.id
-                      ? 'border-primary-600 text-primary-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
-                  }`}
-                  aria-current={activeTab === feature.id ? 'page' : undefined}
-                >
-                  {feature.name}
-                </button>
-              ))}
-            </nav>
-
-            <div className="p-10 min-h-[280px]">
-              {features.map((feature) => (
-                <div
-                  key={feature.id}
-                  className={activeTab === feature.id ? 'block' : 'hidden'}
-                  role="tabpanel"
-                >
-                  <h3 className="text-2xl font-semibold text-secondary-900 mb-4">
-                    {feature.name}
-                  </h3>
-                  <p className="text-secondary-700 mb-6">{feature.description}</p>
-
-                  <div className="bg-gray-100 rounded-lg p-6 flex items-center justify-center shadow-inner">
-                    <img
-                      src={`https://images.pexels.com/photos/${
-                        feature.id === 'dashboard'
-                          ? '3184338'
-                          : feature.id === 'automation'
-                          ? '3184360'
-                          : feature.id === 'analytics'
-                          ? '3184465'
-                          : '3184292'
-                      }/pexels-photo-${
-                        feature.id === 'dashboard'
-                          ? '3184338'
-                          : feature.id === 'automation'
-                          ? '3184360'
-                          : feature.id === 'analytics'
-                          ? '3184465'
-                          : '3184292'
-                      }.jpeg?auto=compress&cs=tinysrgb&w=600`}
-                      alt={`${feature.name} interface`}
-                      className="max-w-full h-auto rounded-lg shadow-md"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden border border-gray-300 h-[700px]">
+            <iframe
+              title="Tourism App Prototype"
+              className="h-full m-auto"
+              src="https://embed.figma.com/proto/GWvEnW8Vicvo5hHR8vYmnk/Tourism-app?node-id=206-2403&p=f&scaling=scale-down&content-scaling=fixed&page-id=50%3A1963&starting-point-node-id=206%3A2403&embed-host=share"
+              allowFullScreen
+            ></iframe>
           </div>
+
+          <p className="text-sm text-center text-gray-500 mt-4 italic">
+            *Click through the screens to explore the full tourism app prototype.*
+          </p>
         </section>
 
-        {/* Prototype Features Grid */}
+        {/* Tourism App Features Grid */}
         <section className="mb-20 max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-secondary-900 mb-10 text-center">
-            Key Prototype Features
+            Key Tourism App Features
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">User Authentication</h3>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Interactive Maps</h3>
               <p className="text-secondary-600">
-                Secure login system with role-based access control.
+                Detailed maps with points of interest, routes, and offline access.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Data Visualization</h3>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Personalized Itineraries</h3>
               <p className="text-secondary-600">
-                Interactive charts and graphs for business insights.
+                Customizable trip plans based on user preferences and interests.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Workflow Builder</h3>
-              <p className="text-secondary-600">Drag-and-drop interface for creating automated processes.</p>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Local Experience Recommendations</h3>
+              <p className="text-secondary-600">
+                Curated suggestions for restaurants, tours, and activities nearby.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Real-time Updates</h3>
-              <p className="text-secondary-600">Live data synchronization across all connected devices.</p>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Real-time Weather Updates</h3>
+              <p className="text-secondary-600">
+                Up-to-date weather forecasts to help plan your day effectively.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Mobile Responsive</h3>
-              <p className="text-secondary-600">Optimized experience across desktop, tablet, and mobile.</p>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Multi-language Support</h3>
+              <p className="text-secondary-600">
+                User interface and content available in multiple languages for global travelers.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">API Integration</h3>
-              <p className="text-secondary-600">Connect with popular business tools and services.</p>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Booking Integration</h3>
+              <p className="text-secondary-600">
+                Seamless booking of hotels, flights, and tours directly within the app.
+              </p>
             </div>
           </div>
         </section>
+
 
         {/* Technical Stack */}
         <section className="bg-secondary-900 text-white p-10 rounded-xl max-w-6xl mx-auto shadow-lg">
@@ -226,9 +190,10 @@ const Prototype = () => {
             ))}
           </div>
           <p className="mt-8 text-center text-secondary-300 text-lg max-w-3xl mx-auto">
-            Built with modern technologies ensuring scalability, performance, and maintainability.
+            This technology stack is carefully chosen to ensure scalability, performance, and maintainability for a high-traffic mobile application expected to serve over one million users worldwide once developed by our expert team.
           </p>
         </section>
+
       </div>
     </div>
   );

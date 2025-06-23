@@ -171,38 +171,8 @@ const ProblemSection = () => {
                 </BarChart>
               </ResponsiveContainer>
             </div>
-            <div className='bg-white rounded-lg shadow-md col-span-1'>
-              <h2 className="text-xl text-center text-secondary-900 mb-1">
-                Survey: How to Improve Rural Tourism?
-              </h2>
-
-              <ResponsiveContainer width="100%" height={350}>
-                <PieChart>
-                  <Pie
-                    data={surveyData}
-                    dataKey="value"
-                    nameKey="label"
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={120}
-                    label={renderCustomizedLabel}
-                    labelLine={false}
-                    fill="#8884d8"
-                  >
-                    {surveyData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index]} />
-                    ))}
-                  </Pie>
-                  <Tooltip />
-                </PieChart>
-              </ResponsiveContainer>
-
-              <p className="text-sm text-center text-gray-500 mt-2">
-                Source: Abdellah's Rural Tourism Survey (2025)
-              </p>
-
-            </div>
-            <div className='bg-white rounded-lg shadow-md col-span-1'>
+          
+            <div className='bg-white rounded-lg shadow-md col-span-2'>
               <h2 className="text-xl text-center text-secondary-900 mb-1">
                 Morocco Tourism Growth (Last 5 Years)
               </h2>
